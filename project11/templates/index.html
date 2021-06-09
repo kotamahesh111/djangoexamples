@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title> login page</title>
+        <body>
+           <form method="POST"  action="/logincheck/">
+                 {% csrf_token %}
+<table align="center" border="2">
+
+<tr>
+    <th colspan="2"> LOG-IN PAGE</th>
+</tr>
+
+<tr> 
+    <td>username</td>
+    <td><input type="text"  placeholder="username"  name="name" required></td>
+</tr>
+
+<tr>
+    <td>password</td>
+    <td><input type="text" placeholder="password"  name="password"required></td>
+</tr>
+
+<tr> 
+    <th colspan="2"><button type="submit">login </button></th>
+</tr>
+</table>
+
+
+
+     </form>
+        </body>
+    </head>
+</html>
