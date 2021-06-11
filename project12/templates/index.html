@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title> login page</title>
+     <body>
+         {% if message == 'TRUE' %}
+            <h1> welcome user </h1>
+        {% elif message == 'FALSE' %}
+            <h1> sorry! invalid user </h1>
+        {% else %}
+             <form method="POST"  action="/index/">
+                 {% csrf_token %}
+        <table align="center" border="2">
+
+<tr>
+    <th colspan="2"> LOG-IN PAGE</th>
+</tr>
+
+<tr> 
+    <td>username</td>
+    <td><input type="text"  placeholder="username"  name="name" required></td>
+</tr>
+
+<tr>
+    <td>password</td>
+    <td><input type="password" placeholder="password"  name="password" required></td>
+</tr>
+
+<tr> 
+    <th colspan="2"><button type="submit">login </button></th>
+</tr>
+</table>
+ </form> 
+    {% endif %}
+        </body>
+    </head>
+</html>
